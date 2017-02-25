@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.path.json.JsonPath;
 
-public class restAPITesting {
+public class wunderList_restAPITesting {
 
 	private final String client_ID="3ccf93b534acfd0dc428";
 	//private final String clientSecret="9b32bcf236865123cc1bff130fbde38c2641d807fb942e733f942a79dfe1";

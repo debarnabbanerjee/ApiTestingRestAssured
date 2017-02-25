@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Rest Assured testing]">
+  <test name="Rest Assured testing Test(failed)">
+    <classes>
+      <class name="com.debarnab.restAssured.Testing.restAPITesting">
+        <methods>
+          <include name="authTestCase"/>
+          <include name="queryASpecificList"/>
+          <include name="updateAList"/>
+          <include name="getAllList"/>
+          <include name="createList"/>
+          <include name="verifyAddedList"/>
+        </methods>
+      </class> <!-- com.debarnab.restAssured.Testing.restAPITesting -->
+    </classes>
+  </test> <!-- Rest Assured testing Test(failed) -->
+</suite> <!-- Failed suite [Rest Assured testing] -->

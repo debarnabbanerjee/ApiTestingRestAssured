@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "integer"
+      },
+      "title": {
+        "type": "string"
+      },
+      "owner_type": {
+        "type": "string"
+      },
+      "owner_id": {
+        "type": "integer"
+      },
+      "list_type": {
+        "type": "string"
+      },
+      "public": {
+        "type": "boolean"
+      },
+      "revision": {
+        "type": "integer"
+      },
+      "created_at": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "title",
+      "owner_type",
+      "owner_id",
+      "list_type",
+      "public",
+      "revision",
+      "created_at",
+      "type"
+    ]
+  }
+}

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Rest_Assured_testing">
+              <span class="suite-name border-failed">Rest Assured testing</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Rest_Assured_testing">
+                    <span>C:\Users\Debar\ApiTestingRestAssured\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Rest_Assured_testing">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Rest_Assured_testing">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Rest_Assured_testing">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Rest_Assured_testing">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Rest_Assured_testing">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Rest_Assured_testing">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">8 methods, 1 failed,   7 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Rest_Assured_testing" class="hide-methods failed suite-Rest_Assured_testing"> (hide)</a> <!-- hide-methods failed suite-Rest_Assured_testing -->
+                      <a href="#" panel-name="suite-Rest_Assured_testing" class="show-methods failed suite-Rest_Assured_testing"> (show)</a> <!-- show-methods failed suite-Rest_Assured_testing -->
+                    </span>
+                    <div class="method-list-content failed suite-Rest_Assured_testing">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Rest_Assured_testing" title="com.debarnab.restAssured.Testing.restAPITesting" hash-for-method="updateAList">updateAList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Rest_Assured_testing -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Rest_Assured_testing" class="hide-methods passed suite-Rest_Assured_testing"> (hide)</a> <!-- hide-methods passed suite-Rest_Assured_testing -->
+                      <a href="#" panel-name="suite-Rest_Assured_testing" class="show-methods passed suite-Rest_Assured_testing"> (show)</a> <!-- show-methods passed suite-Rest_Assured_testing -->
+                    </span>
+                    <div class="method-list-content passed suite-Rest_Assured_testing">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Rest_Assured_testing" title="com.debarnab.restAssured.Testing.restAPITesting" hash-for-method="authTestCase">authTestCase</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Rest_Assured_testing" title="com.debarnab.restAssured.Testing.restAPITesting" hash-for-method="createList">createList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Rest_Assured_testing" title="com.debarnab.restAssured.Testing.restAPITesting" hash-for-method="deleteAList">deleteAList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Rest_Assured_testing" title="com.debarnab.restAssured.Testing.restAPITesting" hash-for-method="getAllList">getAllList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Rest_Assured_testing" title="com.debarnab.restAssured.Testing.restAPITesting" hash-for-method="queryASpecificList">queryASpecificList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Rest_Assured_testing" title="com.debarnab.restAssured.Testing.restAPITesting" hash-for-method="validateDeletedList">validateDeletedList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Rest_Assured_testing" title="com.debarnab.restAssured.Testing.restAPITesting" hash-for-method="verifyAddedList">verifyAddedList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Rest_Assured_testing -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Rest_Assured_testing" class="panel Rest_Assured_testing">
+          <div class="suite-Rest_Assured_testing-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.debarnab.restAssured.Testing.restAPITesting</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateAList">
+                  </a> <!-- updateAList -->
+                  <span class="method-name">updateAList</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; doesn&apos;t match actual status code &lt;400&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:60)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:235)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:598)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:760)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:120)
+	at com.jayway.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:128)
+	at com.jayway.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:117)
+	at com.debarnab.restAssured.Testing.restAPITesting.updateAList(restAPITesting.java:170)
+... Removed 38 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Rest_Assured_testing-class-failed -->
+          <div class="suite-Rest_Assured_testing-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.debarnab.restAssured.Testing.restAPITesting</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="authTestCase">
+                  </a> <!-- authTestCase -->
+                  <span class="method-name">authTestCase</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="createList">
+                  </a> <!-- createList -->
+                  <span class="method-name">createList</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteAList">
+                  </a> <!-- deleteAList -->
+                  <span class="method-name">deleteAList</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getAllList">
+                  </a> <!-- getAllList -->
+                  <span class="method-name">getAllList</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="queryASpecificList">
+                  </a> <!-- queryASpecificList -->
+                  <span class="method-name">queryASpecificList</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateDeletedList">
+                  </a> <!-- validateDeletedList -->
+                  <span class="method-name">validateDeletedList</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAddedList">
+                  </a> <!-- verifyAddedList -->
+                  <span class="method-name">verifyAddedList</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Rest_Assured_testing-class-passed -->
+        </div> <!-- panel Rest_Assured_testing -->
+        <div panel-name="test-xml-Rest_Assured_testing" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\Debar\ApiTestingRestAssured\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;Rest Assured testing&quot;&gt;
+  &lt;test name=&quot;Rest Assured testing Test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.debarnab.restAssured.Testing.restAPITesting&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Rest Assured testing Test --&gt;
+&lt;/suite&gt; &lt;!-- Rest Assured testing --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Rest_Assured_testing" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Rest Assured testing</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Rest Assured testing Test (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Rest_Assured_testing" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Rest Assured testing</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Rest_Assured_testing" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Rest Assured testing</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Rest_Assured_testing');
+function tableData_Rest_Assured_testing() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(8);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'authTestCase')
+data.setCell(0, 2, 'com.debarnab.restAssured.Testing.restAPITesting')
+data.setCell(0, 3, 4285);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'createList')
+data.setCell(1, 2, 'com.debarnab.restAssured.Testing.restAPITesting')
+data.setCell(1, 3, 1357);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'getAllList')
+data.setCell(2, 2, 'com.debarnab.restAssured.Testing.restAPITesting')
+data.setCell(2, 3, 566);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifyAddedList')
+data.setCell(3, 2, 'com.debarnab.restAssured.Testing.restAPITesting')
+data.setCell(3, 3, 564);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'validateDeletedList')
+data.setCell(4, 2, 'com.debarnab.restAssured.Testing.restAPITesting')
+data.setCell(4, 3, 486);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'deleteAList')
+data.setCell(5, 2, 'com.debarnab.restAssured.Testing.restAPITesting')
+data.setCell(5, 3, 434);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'queryASpecificList')
+data.setCell(6, 2, 'com.debarnab.restAssured.Testing.restAPITesting')
+data.setCell(6, 3, 405);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'updateAList')
+data.setCell(7, 2, 'com.debarnab.restAssured.Testing.restAPITesting')
+data.setCell(7, 3, 382);
+window.suiteTableData['Rest_Assured_testing']= { tableData: data, tableDiv: 'times-div-Rest_Assured_testing'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <div id="times-div-Rest_Assured_testing">
+              </div> <!-- times-div-Rest_Assured_testing -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Rest_Assured_testing" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Rest Assured testing</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Rest_Assured_testing" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Rest_Assured_testing" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.debarnab.restAssured.Testing.restAPITesting</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">authTestCase</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getAllList</span>
+                <span class="method-start">4290 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">createList</span>
+                <span class="method-start">4857 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyAddedList</span>
+                <span class="method-start">6215 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">queryASpecificList</span>
+                <span class="method-start">6788 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteAList</span>
+                <span class="method-start">7194 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">updateAList</span>
+                <span class="method-start">7629 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validateDeletedList</span>
+                <span class="method-start">8024 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

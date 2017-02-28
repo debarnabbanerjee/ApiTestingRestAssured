@@ -9,11 +9,13 @@ import java.util.Map;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.jayway.restassured.authentication.AuthenticationScheme;
+import com.jayway.restassured.builder.RequestSpecBuilder;
 import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.path.json.JsonPath;
+import com.jayway.restassured.specification.RequestSpecification;
 
 public class wunderList_restAPITesting {
 
@@ -34,6 +36,21 @@ public class wunderList_restAPITesting {
 	private String revision ;
 	private String created_at ;
 	private String type ;
+	private RequestSpecBuilder requestBuilder;
+	private RequestSpecification requestSpec;
+	
+	
+	@BeforeClass
+	public void makeRequest(){
+		Map<String,String> headers =  new HashMap<String,String>();
+		headers.put("X-Access-Token", access_Token);
+		headers.put("X-Client-ID",client_ID);	
+		
+		requestBuilder = new RequestSpecBuilder();
+		requestBuilder.addHeaders(headers);		
+		requestBuilder.setContentType(ContentType.JSON);
+		requestSpec = requestBuilder.build();	
+	}
 
 	@Test
 	public void authTestCase(){
@@ -56,7 +73,7 @@ public class wunderList_restAPITesting {
 	public void getAllList(){
 		//get All Lists and match the schema of the response
 		json = given()
-				.headers("X-Access-Token", access_Token, "X-Client-ID",client_ID)
+				.spec(requestSpec)
 				.when()
 				.get(APIUrl+"/lists")
 				.then()
@@ -80,8 +97,7 @@ public class wunderList_restAPITesting {
 		dataAsPayLoad.put("title", "Debarnab's new Data " + date);
 
 		json = given()
-				.headers("X-Access-Token", access_Token, "X-Client-ID",client_ID)
-				.contentType(ContentType.JSON)
+				.spec(requestSpec)
 				.body(dataAsPayLoad)
 				.when()
 				.post(APIUrl+"/lists")
@@ -117,8 +133,7 @@ public class wunderList_restAPITesting {
 	public void verifyAddedList(){
 		//2. checking that specific list which was added in the previous step in the entire list already added
 		json = given()
-				.headers("X-Access-Token", access_Token, "X-Client-ID",client_ID)
-				.contentType(ContentType.JSON)		
+				.spec(requestSpec)		
 				.when()
 				.get(APIUrl+"/lists")
 				.then()
@@ -139,8 +154,7 @@ public class wunderList_restAPITesting {
 	public void queryASpecificList(){
 		//3. querying with the id of the list added in above step specifically-- getting a specific List
 		json = given()
-				.headers("X-Access-Token", access_Token, "X-Client-ID",client_ID)
-				.contentType(ContentType.JSON)		
+				.spec(requestSpec)
 				.when()
 				.get(APIUrl+"/lists/"+id)
 				.then()
@@ -158,9 +172,8 @@ public class wunderList_restAPITesting {
 		Integer revision_Update = 2;
 		String title_Update = "Updating the title";
 		json = given()
-				.headers("X-Access-Token", access_Token, "X-Client-ID",client_ID)				
+					.spec(requestSpec)				
 				.params("revision", revision_Update)
-				.contentType(ContentType.JSON)
 				.patch(APIUrl+"/lists/"+id)
 				.then()
 				.assertThat()
@@ -174,12 +187,12 @@ public class wunderList_restAPITesting {
 		Assert.assertEquals(jsonPath.get("title"),title_Update);
 		Assert.assertEquals(jsonPath.get("type"),"list");*/
 	}
+	
 	@Test(dependsOnMethods="queryASpecificList")
 	public void deleteAList(){
 		//5.Deleting the already added list and validating the response
 		given()
-		.headers("X-Access-Token", access_Token, "X-Client-ID",client_ID)
-		.contentType(ContentType.JSON)
+			.spec(requestSpec)
 		.params("revision",revision)
 		.delete(APIUrl+"/lists/"+id)
 		.then()
@@ -190,8 +203,7 @@ public class wunderList_restAPITesting {
 	@Test(dependsOnMethods="queryASpecificList")
 	public void validateDeletedList(){		
 		json = given()
-				.headers("X-Access-Token", access_Token, "X-Client-ID",client_ID)
-				.contentType(ContentType.JSON)		
+				.spec(requestSpec)	
 				.when()
 				.get(APIUrl+"/lists")
 				.then()

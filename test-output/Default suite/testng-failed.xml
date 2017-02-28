@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.debarnab.jsonExtraction.jsonExtracting_1">
+      <class name="com.debarnab.jsonExtraction.jsonTesting">
         <methods>
-          <include name="try2"/>
+          <include name="testCase"/>
         </methods>
-      </class> <!-- com.debarnab.jsonExtraction.jsonExtracting_1 -->
+      </class> <!-- com.debarnab.jsonExtraction.jsonTesting -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

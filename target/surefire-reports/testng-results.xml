@@ -2,40 +2,40 @@
 <testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Rest Assured testing" duration-ms="8166" started-at="2017-02-25T16:21:29Z" finished-at="2017-02-25T16:21:37Z">
+  <suite name="Rest Assured testing" duration-ms="17354" started-at="2017-02-25T20:16:49Z" finished-at="2017-02-25T20:17:06Z">
     <groups>
     </groups>
-    <test name="Rest Assured testing Test" duration-ms="8166" started-at="2017-02-25T16:21:29Z" finished-at="2017-02-25T16:21:37Z">
+    <test name="Rest Assured testing Test" duration-ms="17354" started-at="2017-02-25T20:16:49Z" finished-at="2017-02-25T20:17:06Z">
       <class name="com.debarnab.restAssured.Testing.wunderList_restAPITesting">
-        <test-method status="PASS" signature="authTestCase()[pri:0, instance:com.debarnab.restAssured.Testing.wunderList_restAPITesting@c818063]" name="authTestCase" duration-ms="4554" started-at="2017-02-25T17:21:29Z" finished-at="2017-02-25T17:21:34Z">
+        <test-method status="PASS" signature="authTestCase()[pri:0, instance:com.debarnab.restAssured.Testing.wunderList_restAPITesting@c818063]" name="authTestCase" duration-ms="13196" started-at="2017-02-25T21:16:49Z" finished-at="2017-02-25T21:17:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- authTestCase -->
-        <test-method status="PASS" signature="getAllList()[pri:0, instance:com.debarnab.restAssured.Testing.wunderList_restAPITesting@c818063]" name="getAllList" duration-ms="604" started-at="2017-02-25T17:21:34Z" depends-on-methods="com.debarnab.restAssured.Testing.wunderList_restAPITesting.authTestCase" finished-at="2017-02-25T17:21:34Z">
+        <test-method status="PASS" signature="getAllList()[pri:0, instance:com.debarnab.restAssured.Testing.wunderList_restAPITesting@c818063]" name="getAllList" duration-ms="552" started-at="2017-02-25T21:17:02Z" depends-on-methods="com.debarnab.restAssured.Testing.wunderList_restAPITesting.authTestCase" finished-at="2017-02-25T21:17:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAllList -->
-        <test-method status="PASS" signature="createList()[pri:0, instance:com.debarnab.restAssured.Testing.wunderList_restAPITesting@c818063]" name="createList" duration-ms="1185" started-at="2017-02-25T17:21:34Z" depends-on-methods="com.debarnab.restAssured.Testing.wunderList_restAPITesting.getAllList" finished-at="2017-02-25T17:21:35Z">
+        <test-method status="PASS" signature="createList()[pri:0, instance:com.debarnab.restAssured.Testing.wunderList_restAPITesting@c818063]" name="createList" duration-ms="1711" started-at="2017-02-25T21:17:03Z" depends-on-methods="com.debarnab.restAssured.Testing.wunderList_restAPITesting.getAllList" finished-at="2017-02-25T21:17:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createList -->
-        <test-method status="PASS" signature="verifyAddedList()[pri:0, instance:com.debarnab.restAssured.Testing.wunderList_restAPITesting@c818063]" name="verifyAddedList" duration-ms="501" started-at="2017-02-25T17:21:35Z" depends-on-methods="com.debarnab.restAssured.Testing.wunderList_restAPITesting.createList" finished-at="2017-02-25T17:21:36Z">
+        <test-method status="PASS" signature="verifyAddedList()[pri:0, instance:com.debarnab.restAssured.Testing.wunderList_restAPITesting@c818063]" name="verifyAddedList" duration-ms="497" started-at="2017-02-25T21:17:04Z" depends-on-methods="com.debarnab.restAssured.Testing.wunderList_restAPITesting.createList" finished-at="2017-02-25T21:17:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAddedList -->
-        <test-method status="PASS" signature="queryASpecificList()[pri:0, instance:com.debarnab.restAssured.Testing.wunderList_restAPITesting@c818063]" name="queryASpecificList" duration-ms="372" started-at="2017-02-25T17:21:36Z" depends-on-methods="com.debarnab.restAssured.Testing.wunderList_restAPITesting.verifyAddedList" finished-at="2017-02-25T17:21:36Z">
+        <test-method status="PASS" signature="queryASpecificList()[pri:0, instance:com.debarnab.restAssured.Testing.wunderList_restAPITesting@c818063]" name="queryASpecificList" duration-ms="380" started-at="2017-02-25T21:17:05Z" depends-on-methods="com.debarnab.restAssured.Testing.wunderList_restAPITesting.verifyAddedList" finished-at="2017-02-25T21:17:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- queryASpecificList -->
-        <test-method status="PASS" signature="deleteAList()[pri:0, instance:com.debarnab.restAssured.Testing.wunderList_restAPITesting@c818063]" name="deleteAList" duration-ms="438" started-at="2017-02-25T17:21:36Z" depends-on-methods="com.debarnab.restAssured.Testing.wunderList_restAPITesting.queryASpecificList" finished-at="2017-02-25T17:21:37Z">
+        <test-method status="PASS" signature="deleteAList()[pri:0, instance:com.debarnab.restAssured.Testing.wunderList_restAPITesting@c818063]" name="deleteAList" duration-ms="472" started-at="2017-02-25T21:17:05Z" depends-on-methods="com.debarnab.restAssured.Testing.wunderList_restAPITesting.queryASpecificList" finished-at="2017-02-25T21:17:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAList -->
-        <test-method status="PASS" signature="updateAList()[pri:0, instance:com.debarnab.restAssured.Testing.wunderList_restAPITesting@c818063]" name="updateAList" duration-ms="0" started-at="2017-02-25T17:21:37Z" depends-on-methods="com.debarnab.restAssured.Testing.wunderList_restAPITesting.queryASpecificList" finished-at="2017-02-25T17:21:37Z">
+        <test-method status="PASS" signature="updateAList()[pri:0, instance:com.debarnab.restAssured.Testing.wunderList_restAPITesting@c818063]" name="updateAList" duration-ms="0" started-at="2017-02-25T21:17:06Z" depends-on-methods="com.debarnab.restAssured.Testing.wunderList_restAPITesting.queryASpecificList" finished-at="2017-02-25T21:17:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateAList -->
-        <test-method status="PASS" signature="validateDeletedList()[pri:0, instance:com.debarnab.restAssured.Testing.wunderList_restAPITesting@c818063]" name="validateDeletedList" duration-ms="443" started-at="2017-02-25T17:21:37Z" depends-on-methods="com.debarnab.restAssured.Testing.wunderList_restAPITesting.queryASpecificList" finished-at="2017-02-25T17:21:37Z">
+        <test-method status="PASS" signature="validateDeletedList()[pri:0, instance:com.debarnab.restAssured.Testing.wunderList_restAPITesting@c818063]" name="validateDeletedList" duration-ms="433" started-at="2017-02-25T21:17:06Z" depends-on-methods="com.debarnab.restAssured.Testing.wunderList_restAPITesting.queryASpecificList" finished-at="2017-02-25T21:17:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateDeletedList -->

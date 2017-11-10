@@ -39,7 +39,6 @@ public class wunderList_restAPITesting {
 	private RequestSpecBuilder requestBuilder;
 	private RequestSpecification requestSpec;
 	
-	
 	@BeforeClass
 	public void makeRequest(){
 		Map<String,String> headers =  new HashMap<String,String>();
@@ -64,7 +63,7 @@ public class wunderList_restAPITesting {
 				.assertThat()
 				.contentType(ContentType.JSON)
 				.statusCode(200).extract().response().asString();
-
+		System.out.println("Auth response \n " + json);
 		jsonPath = JsonPath.from(json);
 		Assert.assertTrue(jsonPath.getString("name").equalsIgnoreCase("Debarnab Banerjee"));
 		Assert.assertTrue(jsonPath.getString("email").equalsIgnoreCase("debarnab.banerjee@gmail.com"));		
@@ -84,6 +83,7 @@ public class wunderList_restAPITesting {
 				//validate the response here against the schema
 				.extract().response().asString();
 
+		System.out.println("Server response is \n "  + json );
 		jsonPath = JsonPath.from(json);
 		List<String> sectionsInResponse = jsonPath.getList("id");
 		//System.out.println(sectionsInResponse.size());
@@ -167,12 +167,11 @@ public class wunderList_restAPITesting {
 	}
 	@Test(dependsOnMethods="queryASpecificList")
 	public void updateAList(){		
-
-	/*	//4.Updating the already added list and validating the response -- not working always bad request
+/*	//4.Updating the already added list and validating the response -- not working always bad request
 		Integer revision_Update = 2;
 		String title_Update = "Updating the title";
 		json = given()
-					.spec(requestSpec)				
+					.spec(requestSpec)
 				.params("revision", revision_Update)
 				.patch(APIUrl+"/lists/"+id)
 				.then()
